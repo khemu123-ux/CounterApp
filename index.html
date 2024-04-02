@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+		*{
+			padding: 0px;
+			margin: 0px;
+		}
+
+		.btn
+		{
+			background-color: orangered;
+			font-size: 20px;
+			cursor: pointer;
+
+		}
+		.count
+		{
+         font-size: 30px;
+         margin-bottom: 30px;
+		}
+		
+	</style>
+	<title>counter app</title>
+</head>
+<body>
+	<div class="app">
+		<h2>Counter App</h2><br>
+		<div class="count">0</div>
+		<br><br>
+		<button class="btn" onclick="increment()">INCREMENT</button>
+		<button class="btn" onclick="decrement()">DECREMENT</button>
+		<button class="btn" onclick="reset()">RESET</button>
+	</div>
+
+</body>
+
+
+<script type="text/javascript">
+	let count=0
+	const cnt=document.querySelector('.count')
+
+	function updtcnt() {
+		cnt.textContent=count;
+	}
+
+	function increment(){
+		count++
+		updtcnt();
+	}
+
+	function decrement()
+	{
+     if(count>0)
+     {
+     	count--
+   	updtcnt();
+   
+     }
+   	
+	}
+
+	function reset() {
+		count=0;
+		updtcnt();
+	}
+
+
+</script>
+</html>
